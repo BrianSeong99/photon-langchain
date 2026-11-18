@@ -1,0 +1,48 @@
+{
+  "name": "@brianseong99/photon-langchain",
+  "version": "0.1.0",
+  "description": "A Photon Stable iMessage channel for LangSmith Managed Deep Agents",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build",
+    "smoke": "sh scripts/smoke-package.sh"
+  },
+  "dependencies": {
+    "@spectrum-ts/core": "12.16.0",
+    "@spectrum-ts/imessage": "12.16.0",
+    "uuid": "11.1.0"
+  },
+  "peerDependencies": {
+    "managed-deepagents": "0.10.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.2",
+    "managed-deepagents": "0.10.4",
+    "tsdown": "0.23.7",
+    "typescript": "6.0.3",
+    "vitest": "5.1.1"
+  },
+  "overrides": {
+    "managed-deepagents": {
+      "deepagents": "1.16.1"
+    }
+  }
+}

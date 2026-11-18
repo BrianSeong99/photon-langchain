@@ -1,0 +1,19 @@
+{
+  "name": "photon-imessage-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "mda build",
+    "dev": "mda dev",
+    "deploy": "mda deploy"
+  },
+  "dependencies": {
+    "managed-deepagents": "0.10.4"
+  },
+  "overrides": {
+    "managed-deepagents": {
+      "deepagents": "1.16.1"
+    }
+  }
+}

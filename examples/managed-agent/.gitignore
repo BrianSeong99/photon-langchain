@@ -1,0 +1,6 @@
+node_modules/
+.mda/
+.env
+.env.*
+!.env.example
+vendor/
